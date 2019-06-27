@@ -1,0 +1,73 @@
+﻿<Window x:Class="wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf"
+        mc:Ignorable="d"
+        Title="Считалка" Height="350" Width="300" MinHeight="250" MinWidth="200">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FF678ED3" Offset="0"/>
+            <GradientStop Color="#FF0D4040" Offset="0.336"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="20" Background="Beige">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="bt0" Click="ButtonDg_Click" Content="0" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt1" Click="ButtonDg_Click" Content="1" Grid.Column="1" Grid.Row="7" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt2" Click="ButtonDg_Click" Content="2" Grid.Column="2" Grid.Row="7" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt3" Click="ButtonDg_Click" Content="3" Grid.Column="3" Grid.Row="7" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt4" Click="ButtonDg_Click" Content="4" Grid.Column="1" Grid.Row="6" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt5" Click="ButtonDg_Click" Content="5" Grid.Column="2" Grid.Row="6" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt6" Click="ButtonDg_Click" Content="6" Grid.Column="3" Grid.Row="6" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt7" Click="ButtonDg_Click" Content="7" Grid.Column="1" Grid.Row="5" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt8" Click="ButtonDg_Click" Content="8" Grid.Column="2" Grid.Row="5" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="bt9" Click="ButtonDg_Click" Content="9" Grid.Column="3" Grid.Row="5" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+        <Button x:Name="btDot" Click="ButtonDg_Click" Content="." Grid.Column="3" Grid.Row="8" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFC3F784"/>
+
+        <Button x:Name="btBack" Click="ButtonOp_Click" Content="B" Grid.Column="1" Grid.Row="4" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="#FFDC965C"/>
+        <Button x:Name="btCE" Click="ButtonOp_Click" Content="CE" Grid.Column="2" Grid.Row="4" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="#FFFFB6B6"/>
+        <Button x:Name="btC" Click="ButtonOp_Click" Content="C" Grid.Column="3" Grid.Row="4" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="#FFFFB6B6"/>
+        <Button x:Name="btPM" Click="ButtonOp_Click" Content="+/-" Grid.Column="4" Grid.Row="4" Margin="4" FontFamily="Arial" FontSize="16" Foreground="#FF610F1A" Background="#FF80F3B4"/>
+        <Button x:Name="btSqrt" Click="ButtonOp_Click" Content="Sqrt" Grid.Column="5" Grid.Row="4" Margin="4" FontFamily="Arial" FontSize="12" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+        <Button x:Name="btPercent" Click="ButtonOp_Click" Content="%" Grid.Column="5" Grid.Row="5" Margin="4" FontFamily="Arial" FontSize="16" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+        <Button x:Name="btOneOver" Click="ButtonOp_Click" Content="1/x" Grid.Column="5" Grid.Row="6" Margin="4" FontFamily="Arial" FontSize="16" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+
+        <Button x:Name="btDevide" Click="ButtonOp_Click" Content="/" Grid.Column="4" Grid.Row="5" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+        <Button x:Name="btMultiply" Click="ButtonOp_Click" Content="*" Grid.Column="4" Grid.Row="6" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+        <Button x:Name="btMinus" Click="ButtonOp_Click" Content="-" Grid.Column="4" Grid.Row="7" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+        <Button x:Name="btPlus" Click="ButtonOp_Click" Content="+" Grid.Column="4" Grid.Row="8" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+
+        <Button x:Name="btMemClear" Click="ButtonOp_Click" Content="MC" Grid.Column="1" Grid.Row="3" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="Darkgray"/>
+        <Button x:Name="btMemRead" Click="ButtonOp_Click" Content="MR" Grid.Column="2" Grid.Row="3" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="Darkgray"/>
+        <Button x:Name="btMemSave" Click="ButtonOp_Click" Content="MS" Grid.Column="3" Grid.Row="3" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="Darkgray"/>
+        <Button x:Name="btMemPlus" Click="ButtonOp_Click" Content="M+" Grid.Column="4" Grid.Row="3" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="Darkgray"/>
+        <Button x:Name="btMemMinus" Click="ButtonOp_Click" Content="M-" Grid.Column="5" Grid.Row="3" Margin="4" FontFamily="Arial" FontSize="14" Foreground="#FF610F1A" Background="Darkgray"/>
+
+
+        <Button x:Name="btEqual" Click="ButtonOp_Click" Content="=" Grid.Column="5" Grid.Row="7" Grid.RowSpan="8" Margin="4" FontFamily="Arial" FontSize="18" Foreground="#FF610F1A" Background="#FFBDC3FD"/>
+
+        <TextBlock x:Name="txBlock" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="2" Background="White" FontSize="16" FontFamily="Arial" TextAlignment="Right"/>
+    </Grid>
+</Window>
